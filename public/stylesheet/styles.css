@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Poppins:ital,wght@0,400;0,500;1,400&family=Roboto:wght@100;400;500;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {   
+    text-decoration: none;   
+}
+
+body {
+    background-color:white;
+}
+
+.container {
+    width: 100%;    
+    min-height: 100vh;
+    margin:auto;
+}
+
+nav {    
+    display:flex;    
+    justify-content: space-between;
+    flex-wrap: wrap;    
+    width: 100%;        
+    align-items: center;
+}
+
+nav .logo {
+    width: 200px;    
+    padding: 1rem 0;
+    margin-left: 1rem;
+}
+
+nav .logo img {
+    width: 100%;
+}
+
+nav ul {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin:auto;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 10px 15px;
+    transition:0.5s ease;
+}
+
+nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color:black;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+nav ul li:hover {    
+    transition:0.5s ease;
+    border-bottom: 1px solid rgb(119, 62, 42);
+}
+
+.cadastro {
+    padding: 68px;
+    background-color: transparent;
+    text-align: center;
+    max-width: 1250px;
+    margin:auto;
+    /* display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin:auto;
+    text-align:center;
+    height:30vh;
+    background:coral;     */
+}
+.cadastro .heading_cadastro {
+    margin-top: 0;
+    color: #000;
+    font-size: 38px;
+    line-height: 42px;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.cadastro .text_cadastro {
+    margin-top: 28px;
+    margin-bottom: 50px;
+    padding-right: 72px;
+    padding-left: 72px;
+    color: #000;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    /* width: 70%;
+    line-height: 22px;    
+    margin: 16px auto; */
+}
+
+.main_banner {
+    display:flex;
+    justify-content: space-around;    
+    align-items: center;    
+    width: 95%;
+    margin:auto;    
+    
+}
+
+.texto {
+    flex:0 0 66.66%;
+    height: 100%;    
+}
+
+.texto .heading_main {
+    justify-content: start;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #000;
+    font-size: 50px;
+    line-height: 45px;
+    font-weight: 900;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    width: 70%;
+}
+
+.texto .text_main {
+    margin-top: 1rem;    
+    font-size: 14px;
+    text-align: left;
+    white-space: normal;
+    width:90%;    
+    padding-right: 72px;    
+    color: #000;
+    line-height: 21px;
+    
+}
+
+.main_img {
+    display:flex;
+    align-items: center;
+    flex:0 0 33.33%;    
+}
+
+.main_img img{
+    vertical-align: middle;
+    display: inline-block;
+    max-width: 100%;
+    border-top-left-radius: 40px;    
+    border-bottom-right-radius: 60px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+
+.contato{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 95%;        
+    margin:auto;
+    padding-top:30px;
+}
+
+.form-contato{
+    display: flex;
+    width: 50%;
+    flex-direction: column;    
+}
+
+form{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+form input {
+    display: block;
+    width: 100%;
+    height: 38px;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    font-size: 14px;    
+    color: #333;    
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+form textarea {
+    display: block;
+    width: 100%;
+    height: 90px;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    font-size: 14px;    
+    color: #333;    
+    background-color: #fff;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+form button {
+    min-width: 250px;
+    width: 30%;        
+    border-radius: 8px;
+    background-color: #68de5a;
+    box-shadow: 1px 6px 16px 0 rgb(0 0 0 / 29%);
+    color: #000;    
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 9px 31px;
+    font-size: 12px;
+}
+
+
+.info {            
+    width: 50%;    
+    display:flex;            
+    margin-left: 1rem;
+}
+
+.info .duvida {
+    color: #000;
+    font-size: 50px;
+    line-height: 45px;
+    font-weight: 900;
+    letter-spacing: -2px;
+    text-transform: uppercase;    
+    text-align: right;
+}
+
+footer {
+    display: block;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    padding: 2rem 0 1rem 0;
+    
+    
+}
+
+footer p {
+    color:#8c52e5;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+}
+
+
