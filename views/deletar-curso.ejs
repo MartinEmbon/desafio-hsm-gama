@@ -3,14 +3,13 @@
     <main>         
       
       <div class="cadastro" id="desafio">
-        <h2 class="heading_cadastro">Atualizar cursos</h2>        
+        <h2 class="heading_cadastro">Deletar de cursos</h2>        
         <p class="cadastro_curso">Por favor, complete formulario de cadastro.</p>
       </div>      
       
       <section class="form-container">
-        <% if(typeof servico !== 'undefined') { %>
 
-        <form class="form-cadastro-curso" action="/editar/<%= servico.id %>/?_method=PUT" method="POST" enctype="multipart/form-data">
+        <form class="form-cadastro-curso" action="/excluir/<%= servico.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
   
           <label for="nome">Título</label>
             <input type="text" name="nome" id="nome" value="<%= servico.nome %>">            
@@ -27,11 +26,9 @@
             <label for="ilustracao">Imagem</label>
             <input type="file" name="ilustracao" id="ilustracao">
 
-            <button type="submit">Atualizar</button>
+            <button type="submit">Deletar</button>
         
           </form>
-          <% } %>
-
       </section>
     </main>
     
