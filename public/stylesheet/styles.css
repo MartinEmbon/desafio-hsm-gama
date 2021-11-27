@@ -13,7 +13,7 @@ a {
 }
 
 body {
-    background-color:white;
+    background-color:#f5f5f5;
 }
 
 .container {
@@ -28,11 +28,16 @@ nav {
     flex-wrap: wrap;    
     width: 100%;        
     align-items: center;
+    background-color:#c9f8a6;
+    overflow: hidden;
+    box-shadow: 0 3px 3px -3px rgba(0,0,0,.2);
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */        
 }
 
 nav .logo {
     width: 200px;    
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     margin-left: 1rem;
 }
 
@@ -67,21 +72,18 @@ nav ul li:hover {
     border-bottom: 1px solid rgb(119, 62, 42);
 }
 
+main {
+    margin-top: 80px; /* Add a top margin to avoid content overlay */
+
+}
 .cadastro {
-    padding: 68px;
+    padding: 10px 68px;
     background-color: transparent;
     text-align: center;
     max-width: 1250px;
-    margin:auto;
-    /* display:flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    margin:auto;
-    text-align:center;
-    height:30vh;
-    background:coral;     */
+    margin:auto;   
 }
+
 .cadastro .heading_cadastro {
     margin-top: 0;
     color: #000;
@@ -92,18 +94,41 @@ nav ul li:hover {
     text-transform: uppercase;
 }
 
+.cadastro img {
+    width: 80%;
+    margin: 1rem 0;
+}
+
+.bolinha {
+    font-size: 1.5rem;
+    position: relative;
+    left: -20px;
+    font-weight: bold;
+    color:#8c52e5;
+}
+
+.bolinha::after {
+    position: absolute;
+    background-color: #68de5a;
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border:none;
+    bottom: -2px;
+    left: -9px;
+    z-index:-1;
+
+}
+
 .cadastro .text_cadastro {
-    margin-top: 28px;
-    margin-bottom: 50px;
+    margin:1rem 0;
     padding-right: 72px;
     padding-left: 72px;
     color: #000;
     font-size: 14px;
     line-height: 21px;
-    text-align: center;
-    /* width: 70%;
-    line-height: 22px;    
-    margin: 16px auto; */
+    text-align: left;
 }
 
 .main_banner {
@@ -159,6 +184,8 @@ nav ul li:hover {
     border-bottom-right-radius: 60px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
+    box-shadow: 0 3px 3px -3px rgba(0,0,0,.2);
+
 }
 
 
@@ -245,9 +272,7 @@ footer {
     margin-right: auto;
     margin-bottom: 0;
     margin-left: auto;
-    padding: 2rem 0 1rem 0;
-    
-    
+    padding: 2rem 0 1rem 0;        
 }
 
 footer p {
@@ -259,4 +284,110 @@ footer p {
     text-align: center;
 }
 
+.cursos {    
+    width: 100%;    
+    flex-direction: column;
+    align-items: flex-start;
+}
 
+.curso {
+    display: flex;    
+    justify-content: start;
+    align-items: center;
+    gap:1rem;    
+    width: 60%;
+    margin:auto;
+    background-color:white;
+    border:1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 17px;
+}
+
+.curso-imagen {    
+    width: 150px;
+    display:inline-block;
+}
+
+.curso-imagen img {
+    width:100%;    
+    border-radius: 5px;
+}
+
+.nome-curso h3 {
+    margin-top: 0;
+    color: #000;
+    font-size: 24px;    
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.nome-curso p {
+    font-size: 14px;
+    line-height: 24px;
+    color: black;    
+    
+}
+
+.form-container{
+    width: 70%;
+    margin:auto;    
+}
+
+.form-cadastro-curso {
+    padding: 20px;
+}
+
+
+.cadastro_curso {
+    text-align:center;
+    margin-top: 14px;
+    color: #000;
+    font-size: 14px;        
+}
+
+.painel-adm {
+    width: 90%;
+    margin:auto;    
+}
+
+.novo-curso {
+    font-size: 12px;
+    color: #000;    
+    line-height: 21px;
+    font-weight: 700;
+    padding: 10px;    
+    text-align: center;   
+    min-width: 250px;
+    width: 30%;            
+    border-radius: 8px;
+    background-color: #68de5a;
+    box-shadow: 1px 6px 16px 0 rgb(0 0 0 / 29%);
+    text-transform: uppercase;
+    cursor: pointer;    
+    
+}
+
+table {    
+    width: 100%;
+    margin:2rem auto;
+}
+
+table th,
+table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.acoes {
+    text-align:center;    
+}
+
+.acoes i {
+    color:#8c52e5;
+    margin-left: 0.25rem;
+}
+
+footer a {
+    text-decoration: none;
+}

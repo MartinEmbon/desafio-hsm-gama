@@ -1,44 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/stylesheet/styles.css">
-  <title>Document</title>
-</head>
-<body>
+<%- include('./partials/__header'); %>
 
-  <div class="container">
-
-    <nav>
-
-      <a href="#">
-        <div class="logo">
-          <img src="/images/logo-gama.png" alt="">
-        </div>
-      </a>              
-
-      <ul>
-        <li><a href="#">CRUD DESAFIO</a></li>
-        <li><a href="#main">Sobre Martin</a></li>
-        <li><a href="#contato">Contato</a></li>        
-      </ul>
-    </nav>
-
-    <main>
+    <main>         
       
-        <div class="cadastro">
-          <h2 class="heading_cadastro">CRUD Desafio Bootcamp HSM</h2>
-          <p class="text_cadastro">Acreditamos que o ensino tradicional não prepara os profissionais para o mercado de tecnologia, e que talentos qualificados são formados por habilidades, aprendizados e experiências reais criadas em comunidade. Preparamos profissionais com as habilidades necessárias para o mercado digital, norteados pela necessidade e busca das empresas, de forma ágil e acessível.</p>
+        <div class="cadastro" id="desafio">
+          <h2 class="heading_cadastro">Instruções Desafio Bootcamp HSM</h2>
+          <p class="text_cadastro"><span class="bolinha">1</span>Ingresse a <a href="/admin">painel de administração.</a></p>
+          <p class="text_cadastro"><span class="bolinha">2</span>Adicione um novo cadastro. Se já houver um registro, pode edita-lo ou exclui-lo.</p>
+          <p class="text_cadastro"><span class="bolinha">3</span>Finalmente, click em <a href="/cursos">lista de cursos</a> para renderizar os cursos salvos.</a></p>
           <img loading="lazy" src="images/icons.png" alt="">
         </div>      
-
       
         <div class="main_banner" id="main">
           <div class="texto">
             <h1 class="heading_main">Sobre Martin</h1>
-            <p class="text_main">Acreditamos que o ensino tradicional não prepara os profissionais para o mercado de tecnologia, e que talentos qualificados são formados por habilidades, aprendizados e experiências reais criadas em comunidade. Preparamos profissionais com as habilidades necessárias para o mercado digital, norteados pela necessidade e busca das empresas, de forma ágil e acessível.</p>          
+            <p class="text_main">Venho me-preparando faz quase um ano para minha transição desde administração de restaurantes para TI com certificações em <b>Full Stack</b> e bootcamps.  Sou uma pessoa ultra autodidata e o que não sei, <u>aprendo rápido.</u><br><br> 
+              Meus conhecimentos incluem HTML, CSS, e JS.  Atualmente estou aprimorando skills em react.  Realicei varios estudos e projetos com <em>banco de dados</em> em MySQL, MongoDB e DynamoDB e fiz o <u>Cloud Practitioner da AWS</u> e terminei entre os 300 finalistas
+              (iniciamos 10 mil participantes!!) do hiring coders, bootcamp da VTEX e parceiros organizado pela <strong>Gama Academy</strong>. 
+              Ah! falo inglês, francês e português :)</p>          
           </div>  
             <div class="main_img">
               <img src="/images/FotoMartin.jpg" alt="foto-Martin">
@@ -47,7 +25,7 @@
         </div><!--main_banner-->
       
     </main>
-    
+
     <section class="contato" id="contato">
 
       <div class="form-contato">          
@@ -58,18 +36,14 @@
                   <button type="submit" class="btn btn-primary">enviar</button>
               </form>
         </div>
-
+  
           <div class="info">
-                 <h1 class="duvida">DÚVIDAS? ENTRE EM CONTATO</h1>
+                 <h1 class="duvida">DÚVIDAS? ENTRE EM CONTATO!</h1>
           </div><!--info-->
           
-
+  
   </section>  
     
-    <footer>
-        <p>desenvolvido por Martin</p>
-      </footer>
   
-  </div>
-</body>
-</html>
+    
+    <%- include('./partials/__footer'); %>

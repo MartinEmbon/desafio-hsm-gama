@@ -1,0 +1,43 @@
+<%- include('./partials/__header'); %>
+
+    <main>         
+      
+      <div class="cadastro" id="desafio">
+        <h2 class="heading_cadastro">Painel de administação </h2>        
+      </div>      
+      
+      <section class="painel-adm">        
+        <a href="/cadastro" class="novo-curso">Adicionar novo curso</a>                  
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Título</th>
+                    <th>Professor</th>
+                    <th>Aulas</th>
+                    <th>Descrição</th>
+                    <th>Imagem</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>                
+                <tr>
+                    <td>1</td>
+                    <td>Sertanejo</td>
+                    <td>Dr. Pedro</td>
+                    <td>Programacion</td>
+                    <td>El mejor curso</td>
+                    <td>https://www.google.com</td>
+                    <td class="acoes">
+                        <a href="#" class="btn"><i class="fas fa-edit"></i></a>
+                        <a href="#" class="btn"><i class="fas fa-trash-alt"></i></a>
+                    </td>
+                </tr>                
+            </tbody>
+        </table>        
+    </section>
+
+      
+    </main>
+    
+    <%- include('./partials/__footer'); %>
