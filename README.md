@@ -14,4 +14,4 @@
 
 7. Para rodar o projeto: npm install. **Finalmente, npm start**
 
-8. [Link do projeto em heroku: click aqui!](www.google.ocm)
+8. [Link do projeto em heroku: click aqui!](https://www.google.com)
