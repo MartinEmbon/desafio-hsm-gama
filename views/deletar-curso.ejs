@@ -12,22 +12,22 @@
         <form class="form-cadastro-curso" action="/excluir/<%= curso.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
   
           <label for="nome">Título</label>
-            <input type="text" name="nome" id="nome" value="<%= curso.nome %>">            
+            <input type="text" name="nome" id="nome" disabled value="<%= curso.nome %>">            
 
             <label for="professor">Professor</label>
-            <input type="text" name="professor" id="professor" value="<%= curso.professor %>">
+            <input type="text" name="professor" id="professor" disabled value="<%= curso.professor %>">
             
             <label for="aulas">Lista de aulas</label>
-            <input type="text" name="aulas" id="aulas" value="<%= curso.aulas %>">
+            <input type="text" name="aulas" id="aulas" disabled value="<%= curso.aulas %>">
 
             <label for="descricao">Descrição</label>
-            <textarea name="descricao" name="descricao" id="descricao" value="<%= curso.descricao %>"></textarea>
+            <textarea name="descricao" disabled id="descricao"><%=curso.descricao %> </textarea>
 
             <% if(curso.ilustracao) { %>
               <img class="thumb" src="/uploads/<%= curso.ilustracao %>">
               <% } %>
 
-            <input type="file" name="ilustracao" id="ilustracao">
+            <input type="file" disabled name="ilustracao" id="ilustracao">
 
             <button type="submit">Deletar</button>
         
