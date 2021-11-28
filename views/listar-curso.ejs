@@ -5,27 +5,26 @@
       <div class="cadastro" id="desafio">
         <h2 class="heading_cadastro">Lista de cursos cadastrados</h2>        
       </div>      
-
-
-
-        <% for (let servico of servicos) %> {
+        
         <section class="cursos">                        
+          <% for (let curso of cursos) { %> 
               <div class="curso">
-                <div class="curso-imagen">                   
-                    <img src="images/mario.png" alt="">
+                <div class="curso-imagen">
+                  <img src="/uploads/<%=curso.ilustracao%>" alt="">
                 </div> <!--curso-imagen-->
                 
+                                
                 <div class="nome-curso">
-                    <h3>Detalhes do curso</h3>  
-                    <p>Id: 1</p>
-                    <p><%= servico.nome %> </p>
-                    <p><%= servico.professor %></p>
-                    <p>Profesor: Dr. Pedro</p>
-                    <p>Aulas: Intro a programacion</p>                    
+                  <h3>Detalhes do curso</h3>                                      
+                    <p>Curso: <%= curso.nome %> </p>
+                    <p>Professor <%= curso.professor %></p>
+                    <p>Aulas <%= curso.aulas %></p>
+                    <p>Descricao <%= curso.descricao %></p>                    
                 </div> <!--nome-curso-->
             </div>  <!--curso-->                                      
-        </section>
-        <% } %>        
+            <% } %>        
+          </section>
+        
         
     </main>
     

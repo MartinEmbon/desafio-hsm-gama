@@ -7,22 +7,21 @@
         <p class="cadastro_curso">Por favor, complete formulario de cadastro.</p>
       </div>      
       
-      <section class="form-container">
-        <% if(typeof servico !== 'undefined') { %>
+      <section class="form-container">        
 
-        <form class="form-cadastro-curso" action="/editar/<%= servico.id %>/?_method=PUT" method="POST" enctype="multipart/form-data">
+        <form class="form-cadastro-curso" action="/editar/<%= curso.id %>/?_method=PUT" method="POST">
   
           <label for="nome">Título</label>
-            <input type="text" name="nome" id="nome" value="<%= servico.nome %>">            
+            <input type="text" name="nome" id="nome" value="<%= curso.nome %>">            
 
             <label for="professor">Professor</label>
-            <input type="text" name="professor" id="professor" value="<%= servico.professor %>">
+            <input type="text" name="professor" id="professor" value="<%= curso.professor %>">
             
             <label for="aulas">Lista de aulas</label>
-            <input type="text" name="aulas" id="aulas" value="<%= servico.aulas %>">
+            <input type="text" name="aulas" id="aulas" value="<%= curso.aulas %>">
 
             <label for="descricao">Descrição</label>
-            <textarea name="descricao" id="descricao" value="<%= servico.descricao %>"></textarea>
+            <textarea name="descricao" id="descricao" value="<%= curso.descricao %>"></textarea>
 
             <label for="ilustracao">Imagem</label>
             <input type="file" name="ilustracao" id="ilustracao">
@@ -30,7 +29,7 @@
             <button type="submit">Atualizar</button>
         
           </form>
-          <% } %>
+        
 
       </section>
     </main>

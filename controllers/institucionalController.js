@@ -1,9 +1,11 @@
-
 const fs = require('fs');
 const path = require('path');
-const servicosPath = path.join('servicos.json');
-let servicos = fs.readFileSync(servicosPath, { encoding: 'utf-8' });
-servicos = JSON.parse(servicos);
+const cursosPath = path.join('cursos.json');
+const { uuid } = require("uuidv4")
+
+
+let cursos = fs.readFileSync(cursosPath, { encoding: 'utf-8' });
+cursos = JSON.parse(cursos);
 
 
 const institucionalController = {
@@ -14,77 +16,64 @@ const institucionalController = {
         return res.render("cadastro-curso",{title:"Gama Projeto Final"})
     },
     listar:(req,res)=>{
-        return res.render("listar-curso",{title:"Gama Projeto Final"})
+        return res.render("listar-curso",{title:"Gama Projeto Final", cursos})
     },
     admin:(req,res)=>{
-        return res.render("admin-cursos",{title:"Gama Projeto Final",servicos})
+        return res.render("admin-cursos",{title:"Gama Projeto Final",cursos})
     },
     salvar: (req, res) => {
-        let { nome, professor, aulas, descricao  } = req.body;                                
-        let id = 1
-        for(i=0;id>1;i++){
-            id++
-        }
-        //let ilustracao = request.file.filename;        
-        servicos.push({ id, nome, professor, aulas, descricao });        
-        let dadosJson = JSON.stringify(servicos);        
-        fs.writeFileSync(servicosPath, dadosJson);        
+        let { nome, professor, aulas, descricao  } = req.body;                                        
+        let ilustracao = req.file.filename;        
+        cursos.push({ id: uuid(), nome, professor, aulas, descricao, ilustracao });        
+        let dadosJson = JSON.stringify(cursos);        
+        fs.writeFileSync(cursosPath, dadosJson);        
         return res.redirect('/admin');
     },
     excluir: async (req, res) => {
-        let {id} = req.params;
-       // let cursoEncontrado = await Curso.destroy({where: {id}})
-         let servicoEncontrado = servicos.find(servico => servico.id == id)
-        return res.render('deletar-curso', { title: 'Excluir Serviço', servico: servicoEncontrado });
+        let {id} = req.params;       
+        let cursoEncontrado = cursos.find(curso => curso.id == id)
+        return res.render('deletar-curso', { title: 'Excluir Serviço', curso: cursoEncontrado });
     },
     remover: async (req, res) => {
-        let {id} = req.params;        
-        //let cursoEncontrado = await Curso.destroy({where: {id}})
-         let servicoIndex = servicos.findIndex((servico) => servico.id == id);
-         servicos.splice(servicoIndex, 1);        
-         let dadosJson = JSON.stringify(servicos);        
-         fs.writeFileSync(servicosPath, dadosJson);  
+        let {id} = req.params;                
+         let cursoIndex = cursos.findIndex((curso) => curso.id == id);
+         cursos.splice(cursoIndex, 1);        
+         let dadosJson = JSON.stringify(cursos);        
+         fs.writeFileSync(cursosPath, dadosJson);  
         return res.redirect('/admin');
     },
 
-    editar: (request, response) => {
-        /** pegando parametro id da URL */
-        let {id} = request.params;
-        /** busca serviço pelo id */
-        let servicoEncontrado = servicos.find(servico => servico.id == id);
+    editar: (request, response) => {        
+        let {id} = request.params;        
+        let cursoEncontrado = cursos.find(curso => curso.id == id);
         /** renderiza view e manda titulo e obj do serviço */
-        return response.render('editar-curso', { titulo: 'Editar Serviços', servico: servicoEncontrado })
+        return response.render('editar-curso', { titulo: 'Editar Serviços', curso: cursoEncontrado })
 
     },
 
     atualizar: (request, response) => {
-       /** pegando parametro id da URL */
+       
        let { id } = request.params;
-       /** pegando informações do formulário */
+       
        let { nome, professor, aulas, descricao  } = request.body; 
-       /** busca serviço pelo id */
-       let servicoEncontrado = servicos.find(servico => servico.id == id);
+       
+       let cursoEncontrado = cursos.find(curso => curso.id == id);
        
        /** atribuir os novos valores ao servicoEncontrado */
-       servicoEncontrado.nome = nome;
-       servicoEncontrado.professor = professor;
-       servicoEncontrado.aulas = aulas;    
-       servicoEncontrado.descricao = descricao;       
-       
-        console.log(servicoEncontrado)
+       cursoEncontrado.nome = nome;
+       cursoEncontrado.professor = professor;
+       cursoEncontrado.aulas = aulas;    
+       cursoEncontrado.descricao = descricao;       
+               
        /** verifica se tem uma nova imagem antes de atribuir */
-    //    if(request.file){
-    //        servicoEncontrado.ilustracao = request.file.filename;
-    //    }
-        
-        let dadosJson = JSON.stringify(servicos);        
-        fs.writeFileSync(servicosPath, dadosJson);        
+        if(request.file){
+            cursoEncontrado.ilustracao = request.file.filename;
+        }        
+        let dadosJson = JSON.stringify(cursos);        
+        fs.writeFileSync(cursosPath, dadosJson);        
        /* redireciona para lista de serviços */
        return response.redirect('/admin');
-
-    }
-   
-    
+    }       
 }
 
 

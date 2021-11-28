@@ -22,19 +22,17 @@
                 </tr>
             </thead>
             <tbody>                
-                <% for (let servico of servicos) { %>
+                <% for (let curso of cursos) { %>
                     <tr>
                         <td>1</td>
-                        <td><%= servico.nome %></td>
-                        <td><%= servico.professor %></td>
-                        <td><%= servico.aulas %></td>
-                        <td><%= servico.descricao %></td>                    
-                        <td>Ilustracao</td>                    
+                        <td><%= curso.nome %></td>
+                        <td><%= curso.professor %></td>
+                        <td><%= curso.aulas %></td>
+                        <td><%= curso.descricao %></td>                    
+                        <td><%= curso.ilustracao %></td>                                            
                         <td class="acoes">
-                            <a href="/editar/<%= servico.id %>" class="btn"><i class="fas fa-edit"></i></a>                            
-                            <a href="/excluir/<%= servico.id %>" class="btn"><i class="fas fa-trash-alt"></i></a>
-                            
-
+                            <a href="/editar/<%= curso.id %>" class="btn"><i class="fas fa-edit"></i></a>                            
+                            <a href="/excluir/<%= curso.id %>" class="btn"><i class="fas fa-trash-alt"></i></a>                            
                         </td>
                     </tr>                
 
