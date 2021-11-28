@@ -3,9 +3,10 @@ const app = express()
 const path = require("path")
 const methodOverride = require("method-override")
 const dotenv = require("dotenv")
+
+
 dotenv.config({path:"config.env"})
 const PORT = process.env.PORT || 3000
-
 
 let indexRouter = require('./routes/indexRoute');
 

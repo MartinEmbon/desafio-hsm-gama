@@ -5,7 +5,11 @@
       <div class="cadastro" id="desafio">
         <h2 class="heading_cadastro">Lista de cursos cadastrados</h2>        
       </div>      
-        
+            
+        <% if(cursos.length<1) { %> 
+          <p class="text_cadastro otros">Ainda não tem cursos cadastrados ... <a href="/admin">Click aqui para registrar</a></p>
+          <%}%> 
+            
         <section class="cursos">                        
           <% for (let curso of cursos) { %> 
               <div class="curso">

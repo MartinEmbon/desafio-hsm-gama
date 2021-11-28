@@ -12,6 +12,8 @@
 
 6. Para rotas put e delete, use como dependência *methodOverride*.
 
-7. Para rodar o projeto: npm install. **Finalmente, npm start**
+7. Mensagens de alerta: **Sweet Alert**
 
-8. [Link do projeto em heroku: click aqui!](https://www.google.com)
+8. Enviar email de contato: **Email-JS**
+ 
+9. Para rodar o projeto: npm install. **Finalmente, npm start**

@@ -9,21 +9,21 @@
       
       <section class="form-container">
       
-        <form class="form-cadastro-curso" action="/cadastro" method="POST" enctype="multipart/form-data">                
+        <form id="cadastro-form" class="form-cadastro-curso" action="/cadastro" method="POST" enctype="multipart/form-data">                
             <label for="nome">Título</label>
-            <input type="text" name="nome" id="nome">            
+            <input type="text" required name="nome" id="nome">            
 
             <label for="professor">Professor</label>
-            <input type="text" name="professor" id="professor">
+            <input type="text" required name="professor" id="professor">
             
             <label for="aulas">Lista de aulas</label>
-            <input type="text" name="aulas" id="aulas">
+            <input type="text" required name="aulas" id="aulas">
 
             <label for="descricao">Descrição</label>
-            <textarea name="descricao" id="descricao"></textarea>
+            <textarea name="descricao" required id="descricao"></textarea>
 
             <label for="ilustracao">Imagem</label>
-            <input type="file" name="ilustracao" id="ilustracao">
+            <input type="file" required name="ilustracao" id="ilustracao">
 
             <button type="submit">Cadastrar</button>
         

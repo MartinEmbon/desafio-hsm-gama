@@ -401,6 +401,17 @@ footer a {
 .info2{
     display:none;
 }
+
+.otros {
+    text-align:center;
+}
+
+.thumb {
+    width: 50%;
+    margin:auto;
+    margin-bottom: 0.5rem;    
+}
+
 @media screen and (max-width:745px){
     main {
         margin-top:120px;

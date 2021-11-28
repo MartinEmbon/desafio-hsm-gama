@@ -21,9 +21,12 @@
             <input type="text" name="aulas" id="aulas" value="<%= curso.aulas %>">
 
             <label for="descricao">Descrição</label>
-            <textarea name="descricao" id="descricao" value="<%= curso.descricao %>"></textarea>
+            <textarea name="descricao" name="descricao" id="descricao" value="<%= curso.descricao %>"></textarea>
 
-            <label for="ilustracao">Imagem</label>
+            <% if(curso.ilustracao) { %>
+              <img class="thumb" src="/uploads/<%= curso.ilustracao %>">
+              <% } %>
+
             <input type="file" name="ilustracao" id="ilustracao">
 
             <button type="submit">Deletar</button>
