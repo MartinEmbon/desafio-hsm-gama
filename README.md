@@ -17,3 +17,8 @@
 8. Enviar email de contato: **Email-JS**
  
 9. Para rodar o projeto: npm install. **Finalmente, npm start**
+
+# Snapshots
+❮img src="snapshot_readme/fotohome.png" width="100" ❯
+
+
