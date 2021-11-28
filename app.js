@@ -2,8 +2,10 @@ const express = require("express")
 const app = express()
 const path = require("path")
 const methodOverride = require("method-override")
+const dotenv = require("dotenv")
+dotenv.config({path:"config.env"})
+const PORT = process.env.PORT || 3000
 
-const port = 3000;
 
 let indexRouter = require('./routes/indexRoute');
 
@@ -22,6 +24,4 @@ app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
 app.use('/', indexRouter);
 
 
-app.listen(port,()=>{
-    console.log(`server running on ${port}`)
-})
+app.listen(PORT,()=>console.log("server running"))
