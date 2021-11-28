@@ -19,6 +19,14 @@
 9. Para rodar o projeto: npm install. **Finalmente, npm start**
 
 # Snapshots
-❮img src="snapshot_readme/fotohome.png" width="100" ❯
+### Home
+![fotohome](https://user-images.githubusercontent.com/77815749/143791217-df0738c0-6ee5-4586-b441-877803f80498.png)
 
+### Atualizar cadastro
+![fotoatualizar](https://user-images.githubusercontent.com/77815749/143791201-28f0aaab-60bb-4225-83ce-48b7be139e90.png)
 
+### Painel de Adm
+![fotopainel](https://user-images.githubusercontent.com/77815749/143791224-75d2a6af-edb3-4797-997f-2a37930d6f7e.png)
+
+### Renderizar cadastros
+![fotorender](https://user-images.githubusercontent.com/77815749/143791227-fb82d871-3b3f-4a85-a849-2408328ad07e.png)
